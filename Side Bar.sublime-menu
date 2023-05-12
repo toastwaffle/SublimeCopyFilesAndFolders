@@ -1,0 +1,7 @@
+[
+  {
+    "caption": "Copy...",
+    "command": "copy_files_and_folders",
+    "args": {"paths": []} 
+  }
+]
