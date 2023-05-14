@@ -21,6 +21,7 @@ class CopyFilesAndFoldersCommand(sublime_plugin.WindowCommand):
             if is_dir(source):
                 shutil.copytree(source, dest, symlinks=True)
             else:
+                os.makedirs(os.path.dirname(dest), exist_ok=True)
                 shutil.copy2(source, dest)
         except FileExistsError:
             sublime.error_message('Destination {dest} already exists'.format(dest=dest))
